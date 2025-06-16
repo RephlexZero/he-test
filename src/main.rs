@@ -29,6 +29,7 @@ async fn main(_spawner: Spawner) -> ! {
         config.rcc.ahb_pre = AHBPrescaler::DIV1;
         config.rcc.apb1_pre = APBPrescaler::DIV2;
         config.rcc.apb2_pre = APBPrescaler::DIV1;
+        config.rcc.adc = AdcClockSource::Pll(AdcPllPrescaler::DIV1);
     }
     let mut p = embassy_stm32::init(config);
 
